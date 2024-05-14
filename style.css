@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100vw;
+    height: 15vh;
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: fantasy;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resumo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+
+.botao {
+    /* background-color: lightskyblue; */
+    padding: 1rem;
+    /* border-radius: 0.5rem; */
+    border: 2px solid lightskyblue;
+    position: relative;
+    overflow: hidden;
+}
+
+.botao::before {
+    content: '';
+    background-color: lightskyblue;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: 0.5s;
+}
+
+.botao::after {
+    content: '';
+    background-color: lightskyblue;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    z-index: -1;
+    transform: translateY(-100%);
+    transition: 0.5s;
+}
+
+.efeito_botao::before {
+    content: '';
+    background-color: lightskyblue;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: 0.5s;
+}
+
+.efeito_botao::after {
+    content: '';
+    background-color: lightskyblue;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 75%;
+    z-index: -1;
+    transform: translateY(-100%);
+    transition: 0.5s;
+}
+
+.botao:hover::before, .botao:hover::after, .botao:hover .efeito_botao::before, .botao:hover .efeito_botao::after {
+    transform: translateY(0);
+    transition: 0.5s;
+}
+
+.creditos {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
