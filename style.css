@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url(./images/7718877.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 50%;
+}
+
 header {
     width: 100vw;
     height: 15vh;
@@ -13,6 +21,7 @@ header {
     align-items: center;
     font-size: 2rem;
     font-family: fantasy;
+    opacity: 100%;
 }
 
 main {
@@ -20,6 +29,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 100%;
 }
 
 .resumo {
@@ -96,6 +106,12 @@ main {
     transition: 0.5s;
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    margin: 0 5rem;
+}
+
 .creditos {
     width: 100vw;
     display: flex;
@@ -103,4 +119,9 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+}
+
+.rodape {
+    height: 5vh;
+    background-color: lightskyblue;
 }
