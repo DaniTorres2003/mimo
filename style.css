@@ -1,15 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poetsen+One&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    background-image: url(./images/7718877.jpg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 50%;
 }
 
 header {
@@ -19,9 +14,16 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    font-family: fantasy;
+    font-size: 1.8rem;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: bold;
     opacity: 100%;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+header img {
+    width: 45px;
+    margin-left: 1rem;
 }
 
 main {
@@ -37,91 +39,215 @@ main {
     justify-content: center;
     align-items: center;
     margin: 2rem;
-    margin-bottom: 4rem;
+}
+
+main p {
+    font-size: 1.2rem;
+    font-family: "Lato", sans-serif;
+}
+
+.consult {
+    margin: 0 2rem;
+    font-size: 1rem;
 }
 
 .botao {
-    /* background-color: lightskyblue; */
-    padding: 1rem;
-    /* border-radius: 0.5rem; */
-    border: 2px solid lightskyblue;
     position: relative;
-    overflow: hidden;
-}
-
-.botao::before {
-    content: '';
-    background-color: lightskyblue;
-    width: 25%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transform: translateY(100%);
-    transition: 0.5s;
-}
-
-.botao::after {
-    content: '';
-    background-color: lightskyblue;
-    width: 25%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 25%;
-    z-index: -1;
-    transform: translateY(-100%);
-    transition: 0.5s;
-}
-
-.efeito_botao::before {
-    content: '';
-    background-color: lightskyblue;
-    width: 25%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    z-index: -1;
-    transform: translateY(100%);
-    transition: 0.5s;
-}
-
-.efeito_botao::after {
-    content: '';
-    background-color: lightskyblue;
-    width: 25%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 75%;
-    z-index: -1;
-    transform: translateY(-100%);
-    transition: 0.5s;
-}
-
-.botao:hover::before, .botao:hover::after, .botao:hover .efeito_botao::before, .botao:hover .efeito_botao::after {
-    transform: translateY(0);
-    transition: 0.5s;
-}
-
-footer {
+    width: 300px;
+    height: 80px;
+    background-color: black;
+    border-radius: 2rem;
     display: flex;
-    align-items: center;
-    margin: 0 5rem;
-}
-
-.creditos {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    overflow: hidden;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+    z-index: 2;
+}
+.botao::before{
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 150%;
+    background-color: lightskyblue;
+    animation: animate 5s linear infinite;
+    z-index: -2;
 }
 
-.rodape {
-    height: 5vh;
+.botao::after{
+    content: "";
+    position: absolute;
     background-color: lightskyblue;
+    inset: 5px;
+    border-radius: inherit;
+    z-index: -2;
+}
+
+@keyframes animate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+
+.botao a {
+    text-decoration: none;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.fotos {
+    display: flex;
+    width: 80vw;
+    height: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.foto {
+    width: 50px;
+    height: 65px;
+    margin: 0.2rem;
+    transition: 1s;
+}
+
+.foto-clicada {
+    transform: scale(1.8);
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    transition: 1s;
+}
+
+.foto-clicada img {
+    border-radius: 1rem;
+    transition: 1s;
+}
+
+.leticia::after {
+    content: "Leticia 1ºTADS";
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    transition: 1s;
+}
+
+.pedro::after {
+    content: "Pedro 1ºTADS";
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    transition: 1s;
+}
+
+.rhyan::after {
+    content: "Rhyan 1ºTADS";
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    transition: 1s;
+}
+
+.thales::after {
+    content: "Thales 1ºTADS";
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    transition: 1s;
+}
+
+.alvaro::after {
+    content: "Alvaro 5ºTADS";
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    transition: 1s;
+}
+
+.renan::after {
+    content: "Renan 5ºTADS";
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    transition: 1s;
+}
+
+.daniel::after {
+    content: "Daniel 5ºTADS";
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    transition: 1s;
+}
+
+.arthur::after {
+    content: "Arthur 5ºTADS";
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    transition: 1s;
+}
+
+.elizeu::after {
+    content: "Elizeu 5ºTADS";
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    transition: 1s;
+}
+
+.foto-nao-clicada {
+    display: none;
+    transition: 1s;
 }
